@@ -1,0 +1,136 @@
+
+### 📥 **Prompt Ekstraksi Invoice & Faktur Pajak (NER Model / OCR-aware)**
+
+> **Tujuan:**
+> Buat sistem ekstraksi informasi dari dokumen invoice dan faktur pajak dalam bentuk PDF atau hasil OCR, untuk diubah menjadi data terstruktur berupa tabel atau JSON.
+
+---
+
+### 🎯 **Instruksi Ekstraksi**
+
+Ekstrak informasi berikut dari dokumen:
+
+#### 1. **Informasi Umum Invoice**
+
+* `invoice_number`: Nomor invoice unik
+* `invoice_date`: Tanggal terbit invoice
+* `due_date`: Tanggal jatuh tempo
+* `billing_month`: Bulan tagihan
+* `invoice_total`: Total tagihan
+* `invoice_total_in_words`: Terbilang
+* `payment_terms`: Ketentuan pembayaran (misal: Net 30)
+
+#### 2. **Vendor (Penjual)**
+
+* `vendor_name`: Nama perusahaan penjual
+* `vendor_tax_id`: NPWP/Pajak
+* `vendor_address`: Alamat lengkap
+
+#### 3. **Buyer (Pembeli)**
+
+* `buyer_name`: Nama klien/penerima jasa
+* `buyer_tax_id`: NPWP pembeli
+* `buyer_address`: Alamat lengkap
+
+#### 4. **Pembayaran**
+
+* `bank_name`
+* `virtual_account_number`
+* `bank_account_number`
+* `payment_reference`
+* `currency`: (contoh: IDR)
+
+#### 5. **Tanda Tangan**
+
+* `signer_name`: Nama penandatangan
+* `signer_position`: Jabatan penandatangan
+* `signature`: (bisa bounding box atau file image base64)
+
+#### 6. **Line Items (Tabel Rincian Biaya)**
+
+Struktur tiap item:
+
+```json
+{
+  "description": "JL PERUMNAS TANJUNG PIAYU BLOK N NOMOR",
+  "id": "1537347214",
+  "bandwidth": "5MBPS",
+  "period": "202107",
+  "amount": "500000",
+  "type": "ASTINET - ONE TIME CHARGES"
+}
+```
+
+Dan item serupa untuk **ASTINET - MONTHLY RECURRING CHARGES**.
+
+#### 7. **Pajak**
+
+* `subtotal_amount`: Harga sebelum pajak
+* `tax_percentage`: Misal: 10%
+* `tax_amount`: Nilai PPN
+* `luxury_tax_amount`: (jika ada PPnBM)
+* `faktur_number`: Nomor Faktur Pajak
+* `tax_issue_date`: Tanggal faktur
+
+---
+
+### ✅ **Format Output yang Diinginkan (JSON)**
+
+```json
+{
+  "invoice_number": "...",
+  "invoice_date": "...",
+  "due_date": "...",
+  "billing_month": "...",
+  "invoice_total": "...",
+  "invoice_total_in_words": "...",
+  "payment_terms": "...",
+  "vendor": {
+    "name": "...",
+    "tax_id": "...",
+    "address": "..."
+  },
+  "buyer": {
+    "name": "...",
+    "tax_id": "...",
+    "address": "..."
+  },
+  "payment": {
+    "bank_name": "...",
+    "virtual_account_number": "...",
+    "bank_account_number": "...",
+    "currency": "IDR"
+  },
+  "signer": {
+    "name": "...",
+    "position": "...",
+    "signature": "(image or base64)"
+  },
+  "line_items": [
+    {
+      "description": "...",
+      "id": "...",
+      "bandwidth": "...",
+      "period": "...",
+      "amount": "...",
+      "type": "..."
+    }
+  ],
+  "tax": {
+    "subtotal": "...",
+    "tax_percentage": "10",
+    "tax_amount": "...",
+    "luxury_tax_amount": "0",
+    "faktur_number": "...",
+    "tax_issue_date": "..."
+  }
+}
+```
+
+---
+
+### 🧠 **Catatan Teknis**
+
+* Gunakan model layout-aware (LayoutLMv3, Donut) untuk menangkap posisi visual dari tabel dan tanda tangan.
+* NER tags: `B-INVOICE_NUMBER`, `B-BUYER_NAME`, `B-AMOUNT`, `B-PERIOD`, `B-TAX_ID`, dll.
+* Bisa digunakan untuk fine-tuning OCR pipeline atau training data labeling di Label Studio.
