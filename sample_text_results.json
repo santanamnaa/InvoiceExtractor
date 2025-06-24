@@ -1,6 +1,6 @@
 {
   "invoice_number": "Number",
-  "invoice_date": "COMPANY_TOKEN_10",
+  "invoice_date": "20 Agustus 2021",
   "due_date": "20 Agustus 2021",
   "billing_month": "Agustus 2021",
   "invoice_total": "90483900",
@@ -18,8 +18,8 @@
   },
   "payment": {
     "bank_name": "MANDIRI Virtual Account No",
-    "virtual_account_number": "",
-    "bank_account_number": "",
+    "virtual_account_number": "88111-8-0004977298",
+    "bank_account_number": "106.0004651769",
     "currency": "IDR"
   },
   "signer": {
@@ -46,26 +46,27 @@
     }
   ],
   "tax": {
-    "subtotal": "",
-    "tax_percentage": "",
+    "subtotal": "82258100",
+    "tax_percentage": "10",
     "tax_amount": "8225800",
     "luxury_tax_amount": "0",
     "faktur_number": "010",
     "tax_issue_date": ""
   },
+  "account_number": "",
   "extraction_metadata": {
     "extraction_method": "hybrid_regex_ml",
     "text_length": 2102,
     "extracted_fields": 6,
-    "confidence_score": 0.7000000000000001,
+    "confidence_score": 0.7166666666666667,
     "field_confidence": {
       "invoice_number": 0.6,
-      "invoice_date": 0.5,
+      "invoice_date": 0.6,
       "invoice_total": 0.8,
       "vendor.name": 0.7,
       "vendor.tax_id": 1.0,
       "buyer.name": 0.6
     },
-    "extraction_timestamp": "2025-06-24T11:08:04.633647"
+    "extraction_timestamp": "2025-06-24T11:17:16.818796"
   }
 }

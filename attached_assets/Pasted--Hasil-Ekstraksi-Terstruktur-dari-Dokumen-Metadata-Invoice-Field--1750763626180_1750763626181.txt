@@ -1,0 +1,66 @@
+
+
+### ✅ **Hasil Ekstraksi Terstruktur dari Dokumen**
+
+#### 🧾 **Metadata Invoice**
+
+| Field                    | Value                                                              |
+| ------------------------ | ------------------------------------------------------------------ |
+| `invoice_number`         | 4977298000001-202108                                               |
+| `invoice_date`           | 1 Agustus 2021                                                     |
+| `due_date`               | 20 Agustus 2021                                                    |
+| `billing_month`          | Agustus 2021                                                       |
+| `invoice_total`          | Rp. 904.839,00                                                     |
+| `invoice_total_in_words` | Sembilan Ratus Empat Ribu Delapan Ratus Tiga Puluh Sembilan Rupiah |
+| `vendor_name`            | PT. TELKOM INDONESIA (PERSERO) Tbk                                 |
+| `vendor_tax_id`          | 01.000.013.1-093.000                                               |
+| `vendor_address`         | JL JAPATI NO 1 RT 000 RW 000 SADANGSERANG COBLONG KOTA BANDUNG     |
+| `buyer_name`             | CV DIGE BATAM                                                      |
+| `buyer_tax_id`           | 02.357.687.9-215.000                                               |
+| `buyer_address`          | ANGSANA BATAMINDO BATAM KEP. RIAU 29433                            |
+| `account_number`         | 4977298                                                            |
+| `payment_account`        | BANK MANDIRI - 88111-8-0004977298                                  |
+| `payment_terms`          | - (tidak disebut eksplisit, bisa default Net 30)                   |
+| `signer_name`            | MIDUK SILABAN                                                      |
+| `signer_position`        | Manager Billing & Payment Collection (EBIS)                        |
+| `signature_image`        | ✔ (ada tanda tangan visual)                                        |
+
+---
+
+#### 📄 **Line Items / Rincian Biaya**
+
+| No | Description                            | ID         | BW    | Period | Amount (Rp) | Type                        |
+| -- | -------------------------------------- | ---------- | ----- | ------ | ----------- | --------------------------- |
+| 1  | JL PERUMNAS TANJUNG PIAYU BLOK N NOMOR | 1537347214 | 5MBPS | 202107 | 500.000,00  | ASTINET - ONE TIME CHARGES  |
+| 2  | JL PERUMNAS TANJUNG PIAYU BLOK N NOMOR | 1537347214 | 5MBPS | 202107 | 322.581,00  | ASTINET - MONTHLY RECURRING |
+
+---
+
+#### 💰 **Rincian Harga dan Pajak**
+
+| Komponen                 | Nilai               |
+| ------------------------ | ------------------- |
+| Subtotal (ASTINET total) | Rp 822.581,00       |
+| PPN 10%                  | Rp 82.258,00        |
+| Total Pembayaran         | Rp 904.839,00       |
+| Faktur Pajak             | 010.007-21.00740493 |
+| Total PPnBM              | Rp 0,00             |
+
+---
+
+### 🧠 **Kategori Entitas NER Potensial untuk Pelatihan Model**
+
+Kamu bisa latih model dengan label berikut untuk mendeteksi struktur seperti ini:
+
+* `B-INVOICE_NUMBER`, `I-INVOICE_DATE`, `B-DUE_DATE`, `B-VENDOR_NAME`, `B-BUYER_NAME`, `B-TOTAL_AMOUNT`, dll.
+* `B-LINE_ITEM_DESC`, `B-LINE_ITEM_QTY`, `B-LINE_ITEM_PRICE`, `B-PERIOD`, `B-PRODUCT_ID`
+* `B-NPWP`, `B-SIGNER_NAME`, `B-SIGNATURE`, `B-PAYMENT_ACCOUNT`
+
+
+
+seharusnya hasilnya seperti ini dengan invoice tersebut. lakukan juga tambahan dibawah ini:
+### ⚙️ **Tambahan**
+
+1. Gunakan OCR berbasis `LayoutLMv3` atau `Donut` untuk menangkap struktur visual invoice.
+2. Line-item tabular format seperti ini sangat cocok diproses sebagai `multi-span extraction`.
+3. Simpan tanda tangan sebagai bounding box/segmen gambar untuk validasi manual (misalnya base64 PNG).

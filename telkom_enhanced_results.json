@@ -1,0 +1,58 @@
+{
+  "invoice_number": "4977298000001-202108",
+  "invoice_date": "",
+  "due_date": "20 Agustus 2021",
+  "billing_month": "Agustus 2021",
+  "invoice_total": "Rp. 904,839.00",
+  "invoice_total_in_words": "Sembilan Ratus Empat Ribu Delapan Ratus Tiga Puluh Sembilan Rupiah\nAmount in Words Nine Hundred Four thousand Eight Hundred Thirty Nine Rupiah",
+  "account_number": "4977298",
+  "vendor": {
+    "name": "PT. TELKOM INDONESIA (PERSERO) Tbk",
+    "tax_id": "01.000.013.1-093.000",
+    "address": ""
+  },
+  "buyer": {
+    "name": "CV DIGE BATAM",
+    "tax_id": "",
+    "address": "ANGSANA BATAMINDO BATAM KEP. RIAU"
+  },
+  "payment": {
+    "bank_name": "BANK MANDIRI",
+    "bank_account_number": "106.0004651769",
+    "virtual_account_number": "88111-8-0004977298"
+  },
+  "tax": {
+    "subtotal": "Rp 822.581,00",
+    "tax_amount": "Rp 82,258.00",
+    "tax_percentage": "10",
+    "faktur_number": "010.007-21.00740493"
+  },
+  "line_items": [
+    {
+      "type": "ASTINET - ONE TIME CHARGES",
+      "description": "JL PERUMNAS TANJUNG PIAYU BLOK N NOMOR",
+      "id": "1537347214",
+      "bandwidth": "5MBPS",
+      "period": "202107",
+      "amount": "Rp 500,000.00"
+    },
+    {
+      "type": "ASTINET - MONTHLY RECURRING CHARGES",
+      "description": "JL PERUMNAS TANJUNG PIAYU BLOK N NOMOR",
+      "id": "1537347214",
+      "bandwidth": "5MBPS",
+      "period": "202107",
+      "amount": "Rp 322,581.00"
+    }
+  ],
+  "signer": {
+    "name": "MIDUK SILABAN",
+    "position": "Manager Billing\n& Payment Collection"
+  },
+  "extraction_metadata": {
+    "extraction_method": "telkom_enhanced_regex",
+    "confidence_score": 0.9333333333333333,
+    "extracted_fields": 12,
+    "text_length": 3861
+  }
+}

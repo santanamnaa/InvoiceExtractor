@@ -1,9 +1,9 @@
 {
   "invoice_number": "Number",
-  "invoice_date": "",
-  "due_date": "",
-  "billing_month": "",
-  "invoice_total": "",
+  "invoice_date": "20 Agustus 2021",
+  "due_date": "20 Agustus 2021",
+  "billing_month": "Agustus 2021",
+  "invoice_total": "90483900",
   "invoice_total_in_words": "Sembilan Ratus Empat Ribu Delapan Ratus Tiga Puluh Sembilan Rupiah\nAmount in Words Nine Hundred Four thousand Eight Hundred Thirty Nine Rupiah\nUntuk Pembayaran\nBiaya Jasa Layanan Telkom Solution\nIn payment of\nMedan,",
   "payment_terms": "",
   "vendor": {
@@ -78,24 +78,27 @@
     }
   ],
   "tax": {
-    "subtotal": "",
-    "tax_percentage": "",
+    "subtotal": "82258100",
+    "tax_percentage": "10",
     "tax_amount": "8225800",
     "luxury_tax_amount": "0",
     "faktur_number": "010",
     "tax_issue_date": ""
   },
+  "account_number": "",
   "extraction_metadata": {
     "extraction_method": "hybrid_regex_ml",
     "text_length": 3861,
-    "extracted_fields": 4,
-    "confidence_score": 0.725,
+    "extracted_fields": 6,
+    "confidence_score": 0.7166666666666667,
     "field_confidence": {
       "invoice_number": 0.6,
+      "invoice_date": 0.6,
+      "invoice_total": 0.8,
       "vendor.name": 0.7,
       "vendor.tax_id": 1.0,
       "buyer.name": 0.6
     },
-    "extraction_timestamp": "2025-06-24T11:06:43.915894"
+    "extraction_timestamp": "2025-06-24T11:16:04.624139"
   }
 }

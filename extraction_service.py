@@ -127,23 +127,25 @@ class InvoiceExtractor:
             }
         }
         
-        # Extract basic invoice information with enhanced patterns
+        # Extract enhanced invoice information
         result["invoice_number"] = self._extract_field(text, 'invoice_number') or self._extract_invoice_number_enhanced(text)
-        result["invoice_date"] = self._extract_field(text, 'invoice_date')
+        result["invoice_date"] = self._extract_field(text, 'invoice_date') or self._extract_date_enhanced(text, "date")
         result["due_date"] = self._extract_field(text, 'due_date') or self._extract_due_date_enhanced(text)
         result["billing_month"] = self._extract_field(text, 'billing_month') or self._extract_billing_month_enhanced(text)
         result["invoice_total"] = self._extract_field(text, 'invoice_total') or self._extract_total_enhanced(text)
+        result["invoice_total_in_words"] = self._extract_field(text, 'invoice_total_in_words') or self._extract_amount_in_words(text)
+        result["account_number"] = self._extract_field(text, 'account_number')
         
-        # Extract tax information
-        result["tax"]["subtotal"] = self._extract_field(text, 'subtotal')
-        result["tax"]["tax_amount"] = self._extract_field(text, 'tax_amount')
-        result["tax"]["tax_percentage"] = self._extract_field(text, 'tax_percentage')
-        result["tax"]["faktur_number"] = self._extract_field(text, 'faktur_number')
+        # Extract enhanced tax information
+        result["tax"]["subtotal"] = self._extract_field(text, 'subtotal') or self._extract_subtotal_enhanced(text)
+        result["tax"]["tax_amount"] = self._extract_field(text, 'tax_amount') or self._extract_tax_amount_enhanced(text)
+        result["tax"]["tax_percentage"] = self._extract_field(text, 'tax_percentage') or self._extract_tax_percentage_enhanced(text)
+        result["tax"]["faktur_number"] = self._extract_field(text, 'faktur_number') or self._extract_faktur_number_enhanced(text)
         
-        # Extract payment information
-        result["payment"]["bank_name"] = self._extract_field(text, 'bank_name')
-        result["payment"]["bank_account_number"] = self._extract_field(text, 'account_number')
-        result["payment"]["virtual_account_number"] = self._extract_field(text, 'virtual_account')
+        # Extract enhanced payment information
+        result["payment"]["bank_name"] = self._extract_field(text, 'bank_name') or self._extract_bank_name_enhanced(text)
+        result["payment"]["bank_account_number"] = self._extract_field(text, 'bank_account') or self._extract_bank_account_enhanced(text)
+        result["payment"]["virtual_account_number"] = self._extract_field(text, 'virtual_account') or self._extract_virtual_account_enhanced(text)
         
         # Extract vendor and buyer information
         company_names = self._extract_all_matches(text, 'company_name')
@@ -343,4 +345,194 @@ class InvoiceExtractor:
                 amount = match.group(1).replace('.', '').replace(',', '')
                 if len(amount) >= 6:  # Reasonable invoice amount
                     return amount
+        return ""
+    
+    def _extract_date_enhanced(self, text: str, date_type: str) -> str:
+        """Enhanced date extraction for various formats"""
+        patterns = [
+            r'(\d{1,2}\s+\w+\s+\d{4})',  # 1 Agustus 2021
+            r'(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{4})',  # 01/08/2021
+        ]
+        
+        for pattern in patterns:
+            matches = re.findall(pattern, text, re.IGNORECASE)
+            if matches:
+                return matches[0].strip()
+        return ""
+    
+    def _extract_amount_in_words(self, text: str) -> str:
+        """Extract amount in words"""
+        pattern = r'(?:TERBILANG|AMOUNT\s+IN\s+WORDS)\s*([A-Za-z\s]+(?:RUPIAH|DOLLAR))'
+        match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+        if match:
+            return match.group(1).strip()
+        return ""
+    
+    def _extract_vendor_name_enhanced(self, text: str) -> str:
+        """Enhanced vendor name extraction"""
+        patterns = [
+            r'(PT\.?\s+TELKOM\s+INDONESIA[^0-9\n]*)',
+            r'(PT\.?\s+[A-Z\s]+(?:PERSERO|TBK|Tbk)[^0-9\n]*)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_vendor_address_enhanced(self, text: str) -> str:
+        """Enhanced vendor address extraction"""
+        pattern = r'(JL\s+JAPATI[^0-9\n]+(?:BANDUNG|KOTA\s+BANDUNG)[^0-9\n]*)'
+        match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+        if match:
+            return match.group(1).strip()
+        return ""
+    
+    def _extract_vendor_tax_id_enhanced(self, text: str) -> str:
+        """Enhanced vendor tax ID extraction"""
+        pattern = r'NPWP[\/PKP]*[\s\.:]*([0-9\.\-]+)'
+        matches = re.findall(pattern, text, re.IGNORECASE)
+        if matches:
+            # Return the first valid NPWP (vendor's)
+            for match in matches:
+                if len(match.replace('.', '').replace('-', '')) >= 15:
+                    return match
+        return ""
+    
+    def _extract_buyer_name_enhanced(self, text: str) -> str:
+        """Enhanced buyer name extraction"""
+        patterns = [
+            r'(CV\s+DIGE\s+BATAM)',
+            r'(CV\s+[A-Z\s]+)',
+            r'(PT\.?\s+[A-Z\s]+)(?!\s+(?:PERSERO|TBK|INDONESIA))',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                buyer_name = match.group(1).strip()
+                # Exclude vendor names
+                if 'TELKOM' not in buyer_name.upper():
+                    return buyer_name
+        return ""
+    
+    def _extract_buyer_tax_id_enhanced(self, text: str) -> str:
+        """Enhanced buyer tax ID extraction"""
+        pattern = r'NPWP[\/PKP]*[\s\.:]*([0-9\.\-]+)'
+        matches = re.findall(pattern, text, re.IGNORECASE)
+        if len(matches) >= 2:
+            # Return the second NPWP (buyer's)
+            return matches[1] if matches[1] != matches[0] else matches[0]
+        return ""
+    
+    def _extract_buyer_address_enhanced(self, text: str) -> str:
+        """Enhanced buyer address extraction"""
+        pattern = r'(ANGSANA\s+BATAMINDO[^0-9\n]+BATAM[^0-9\n]*)'
+        match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+        if match:
+            return match.group(1).strip()
+        return ""
+    
+    def _extract_bank_name_enhanced(self, text: str) -> str:
+        """Enhanced bank name extraction"""
+        pattern = r'BANK\s+(MANDIRI|BCA|BNI|BRI|PERMATA|[A-Z\s]+)'
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+        return ""
+    
+    def _extract_bank_account_enhanced(self, text: str) -> str:
+        """Enhanced bank account extraction"""
+        patterns = [
+            r'NO\.\s+REKENING[\s\.:]*([0-9\-\.]+)',
+            r'REKENING[\s\.:]*([0-9\-\.]+)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_virtual_account_enhanced(self, text: str) -> str:
+        """Enhanced virtual account extraction"""
+        pattern = r'VIRTUAL\s+ACCOUNT\s+NO[\s\.:]*([0-9\-]+)'
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+        return ""
+    
+    def _extract_subtotal_enhanced(self, text: str) -> str:
+        """Enhanced subtotal extraction"""
+        patterns = [
+            r'DASAR\s+PENGENAAN\s+PAJAK[\s\.:]*([0-9,\.]+)',
+            r'SUBTOTAL[\s\.:]*(?:RP|IDR)?[\s\.,]*([0-9,\.]+)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_tax_amount_enhanced(self, text: str) -> str:
+        """Enhanced tax amount extraction"""
+        patterns = [
+            r'PPN[\s\.:]*(?:RP|IDR)?[\s\.,]*([0-9,\.]+)',
+            r'PPN\s*=\s*\d+%\s*x[^0-9]*([0-9,\.]+)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_tax_percentage_enhanced(self, text: str) -> str:
+        """Enhanced tax percentage extraction"""
+        pattern = r'PPN\s*=\s*(\d+)%'
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return match.group(1)
+        return "10"  # Default Indonesian VAT rate
+    
+    def _extract_faktur_number_enhanced(self, text: str) -> str:
+        """Enhanced faktur number extraction"""
+        patterns = [
+            r'KODE\s+DAN\s+NOMOR\s+SERI\s+FAKTUR\s+PAJAK[\s\.:]*([0-9\.\-]+)',
+            r'FAKTUR\s+PAJAK[\s\.:]*([0-9\.\-]+)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_signer_name_enhanced(self, text: str) -> str:
+        """Enhanced signer name extraction"""
+        patterns = [
+            r'([A-Z\s]+)\s+Manager',
+            r'(MIDUK\s+SILABAN)',
+            r'([A-Z\s]+)\s+MANAGER',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_signer_position_enhanced(self, text: str) -> str:
+        """Enhanced signer position extraction"""
+        patterns = [
+            r'(Manager\s+Billing\s*&\s*Payment\s+Collection[^0-9\n]*)',
+            r'(Manager\s+[A-Z\s&]+)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
         return ""

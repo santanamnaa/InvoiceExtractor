@@ -1,6 +1,7 @@
 """
-Enhanced Extraction Service with ML Integration
+Enhanced Extraction Service with ML Integration and Telkom-Specific Patterns
 Combines regex patterns with trained ML models for improved accuracy
+Includes specialized extraction methods for Indonesian Telkom invoices
 """
 
 import re
