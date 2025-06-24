@@ -1,0 +1,152 @@
+[
+  {
+    "iteration": 1,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:31.553410"
+  },
+  {
+    "iteration": 2,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:31.641063"
+  },
+  {
+    "iteration": 3,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:31.899810"
+  },
+  {
+    "iteration": 4,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:32.082361"
+  },
+  {
+    "iteration": 5,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:32.246561"
+  },
+  {
+    "iteration": 6,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:32.338599"
+  },
+  {
+    "iteration": 7,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:32.493948"
+  },
+  {
+    "iteration": 8,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:32.673762"
+  },
+  {
+    "iteration": 9,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:32.929502"
+  },
+  {
+    "iteration": 10,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:33.157102"
+  },
+  {
+    "iteration": 11,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:33.382086"
+  },
+  {
+    "iteration": 12,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:33.543169"
+  },
+  {
+    "iteration": 13,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:33.719974"
+  },
+  {
+    "iteration": 14,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:33.800359"
+  },
+  {
+    "iteration": 15,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:34.001257"
+  },
+  {
+    "iteration": 16,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:34.132944"
+  },
+  {
+    "iteration": 17,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:34.233427"
+  },
+  {
+    "iteration": 18,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:34.494728"
+  },
+  {
+    "iteration": 19,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:34.717216"
+  },
+  {
+    "iteration": 20,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:34.960203"
+  },
+  {
+    "iteration": 21,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:35.202881"
+  },
+  {
+    "iteration": 22,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:35.282266"
+  },
+  {
+    "iteration": 23,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:35.438335"
+  },
+  {
+    "iteration": 24,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:35.527031"
+  },
+  {
+    "iteration": 25,
+    "model": "RandomForest",
+    "val_f1": 1.0,
+    "timestamp": "2025-06-24T10:59:35.685103"
+  }
+]

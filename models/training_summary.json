@@ -1,0 +1,18 @@
+{
+  "total_iterations": 25,
+  "best_model": "RandomForest",
+  "best_f1_score": 1.0,
+  "target_achieved": true,
+  "training_completed_at": "2025-06-24T10:59:35.691250",
+  "dataset_size": 100,
+  "feature_count": 9,
+  "label_classes": [
+    "B-AMOUNT",
+    "B-INVOICE_DATE",
+    "B-INVOICE_NUMBER",
+    "B-VENDOR_NAME",
+    "B-VENDOR_TAX_ID",
+    "I-VENDOR_NAME",
+    "O"
+  ]
+}

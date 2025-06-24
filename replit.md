@@ -2,7 +2,17 @@
 
 ## Overview
 
-This is a Flask-based web application designed to extract structured information from Indonesian invoices and tax documents. The system accepts PDF files, images (PNG, JPG, JPEG), or direct OCR text input and uses regex-based pattern matching to identify and extract key invoice data such as invoice numbers, dates, amounts, tax information, and vendor details.
+This is a Flask-based web application designed to extract structured information from Indonesian invoices and tax documents. The system uses a hybrid approach combining regex-based pattern matching with machine learning models for enhanced accuracy. It accepts PDF files, images (PNG, JPG, JPEG), or direct OCR text input and extracts key invoice data such as invoice numbers, dates, amounts, tax information, and vendor details.
+
+## Enhanced ML Training Architecture
+
+The system now includes comprehensive machine learning training capabilities:
+- **Hybrid Regex+NER**: Combines regex patterns for fixed structures with ML-based named entity recognition
+- **Layout-aware Features**: Leverages position and context information for better extraction accuracy
+- **Indonesian Tokenization**: Custom tokenizer optimized for Indonesian invoice documents
+- **Minimum 20 Training Iterations**: Ensures robust model training with early stopping
+- **Cross-validation**: K-fold validation for stable performance estimation
+- **Post-processing Normalization**: Automatic data standardization (dates to ISO format, currency normalization, NPWP formatting)
 
 ## System Architecture
 
@@ -35,15 +45,29 @@ This is a Flask-based web application designed to extract structured information
 
 ## Key Components
 
-### InvoiceExtractor Service
-- **Purpose**: Core extraction engine using regex patterns
-- **Capabilities**:
-  - Invoice basic information (number, date, due date, billing month)
-  - Financial data (totals, subtotals, tax amounts)
-  - Tax information (NPWP, faktur pajak numbers)
-  - Banking details (account numbers, virtual accounts)
-  - Vendor and buyer information
+### Enhanced Extraction Services
+
+#### InvoiceExtractor Service (Base)
+- **Purpose**: Core regex-based extraction engine
+- **Capabilities**: Basic pattern matching for invoice elements
 - **Pattern Library**: Extensive regex patterns optimized for Indonesian invoice formats
+
+#### EnhancedInvoiceExtractor Service (ML-Enhanced)
+- **Purpose**: Hybrid extraction combining regex and machine learning
+- **ML Models**: Trained Random Forest, Gradient Boosting, and Logistic Regression models
+- **Features**: 
+  - Layout-aware token features (position, context, patterns)
+  - Indonesian-specific linguistic features
+  - Confidence scoring for extracted data
+  - Post-processing normalization
+- **Training**: Minimum 20 iterations with early stopping and cross-validation
+
+#### ML Training Pipeline
+- **Data Preparation**: IOB2 format labeling, data augmentation, cross-validation splits
+- **Feature Engineering**: 25+ layout-aware features per token including position, context, and pattern matching
+- **Model Training**: Multiple algorithms with hyperparameter randomization
+- **Evaluation**: Comprehensive error analysis, precision/recall metrics, false positive/negative analysis
+- **Artifacts**: Trained models, feature extractors, training history, and evaluation reports
 
 ### File Upload System
 - **Supported Formats**: PDF, PNG, JPG, JPEG, TXT
@@ -109,7 +133,15 @@ This is a Flask-based web application designed to extract structured information
 
 ## Changelog
 
-- June 24, 2025. Initial setup
+- June 24, 2025. Initial setup with basic Flask application and regex-based extraction
+- June 24, 2025. Enhanced with comprehensive ML training pipeline:
+  - Added Jupyter notebooks for data preparation, model training, and evaluation
+  - Implemented hybrid regex+ML extraction approach
+  - Created Indonesian custom tokenizer with layout-aware features
+  - Built training system with minimum 20 iterations and early stopping
+  - Added post-processing normalization for dates, currency, and NPWP
+  - Integrated cross-validation and comprehensive error analysis
+  - Created EnhancedInvoiceExtractor with confidence scoring
 
 ## User Preferences
 

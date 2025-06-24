@@ -5,6 +5,11 @@ from werkzeug.utils import secure_filename
 from werkzeug.middleware.proxy_fix import ProxyFix
 import json
 from extraction_service import InvoiceExtractor
+try:
+    from enhanced_extraction_service import EnhancedInvoiceExtractor
+    ENHANCED_AVAILABLE = True
+except ImportError:
+    ENHANCED_AVAILABLE = False
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -25,8 +30,18 @@ app.config['MAX_CONTENT_LENGTH'] = MAX_FILE_SIZE
 # Create upload directory if it doesn't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# Initialize extraction service
-extractor = InvoiceExtractor()
+# Initialize extraction service (enhanced if available)
+if ENHANCED_AVAILABLE:
+    try:
+        extractor = EnhancedInvoiceExtractor()
+        logging.info("Using enhanced ML-powered extraction service")
+    except Exception as e:
+        logging.warning(f"Could not load enhanced extractor: {e}")
+        extractor = InvoiceExtractor()
+        logging.info("Using basic regex extraction service")
+else:
+    extractor = InvoiceExtractor()
+    logging.info("Using basic regex extraction service")
 
 def allowed_file(filename):
     return '.' in filename and \
