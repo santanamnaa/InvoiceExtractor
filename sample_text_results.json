@@ -1,0 +1,71 @@
+{
+  "invoice_number": "Number",
+  "invoice_date": "COMPANY_TOKEN_10",
+  "due_date": "20 Agustus 2021",
+  "billing_month": "Agustus 2021",
+  "invoice_total": "90483900",
+  "invoice_total_in_words": "Sembilan Ratus Empat Ribu Delapan Ratus Tiga Puluh Sembilan Rupiah\n    Amount in Words Nine Hundred Four thousand Eight Hundred Thirty Nine Rupiah\n    \n    BANK MANDIRI Virtual Account No :",
+  "payment_terms": "",
+  "vendor": {
+    "name": "TELKOM INDONESIA",
+    "tax_id": "02.357.687.9-215.000",
+    "address": "JL JAPATI NO 1 RT 000 RW 000 SADANGSERANG COBLONG KOTA BANDUNG\n    NPWP"
+  },
+  "buyer": {
+    "name": "NO",
+    "tax_id": "02.357.687.9-215.000",
+    "address": "ANGSANA BATAMINDO BATAM KEP. RIAU 29433\n    NPWP"
+  },
+  "payment": {
+    "bank_name": "MANDIRI Virtual Account No",
+    "virtual_account_number": "",
+    "bank_account_number": "",
+    "currency": "IDR"
+  },
+  "signer": {
+    "name": "",
+    "position": "",
+    "signature": ""
+  },
+  "line_items": [
+    {
+      "description": "",
+      "id": "",
+      "bandwidth": "",
+      "period": "",
+      "amount": "50000000",
+      "type": "ASTINET - ONE TIME CHARGES"
+    },
+    {
+      "description": "",
+      "id": "",
+      "bandwidth": "",
+      "period": "",
+      "amount": "50000000",
+      "type": "ASTINET - MONTHLY RECURRING CHARGES"
+    }
+  ],
+  "tax": {
+    "subtotal": "",
+    "tax_percentage": "",
+    "tax_amount": "8225800",
+    "luxury_tax_amount": "0",
+    "faktur_number": "010",
+    "tax_issue_date": ""
+  },
+  "extraction_metadata": {
+    "extraction_method": "hybrid_regex_ml",
+    "text_length": 2102,
+    "extracted_fields": 6,
+    "confidence_score": 0.7000000000000001,
+    "field_confidence": {
+      "invoice_number": 0.6,
+      "invoice_date": 0.5,
+      "invoice_total": 0.8,
+      "vendor.name": 0.7,
+      "vendor.tax_id": 1.0,
+      "buyer.name": 0.6
+    },
+    "extraction_timestamp": "2025-06-24T11:08:04.633647"
+  }
+}

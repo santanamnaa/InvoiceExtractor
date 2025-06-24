@@ -127,12 +127,12 @@ class InvoiceExtractor:
             }
         }
         
-        # Extract basic invoice information
-        result["invoice_number"] = self._extract_field(text, 'invoice_number')
+        # Extract basic invoice information with enhanced patterns
+        result["invoice_number"] = self._extract_field(text, 'invoice_number') or self._extract_invoice_number_enhanced(text)
         result["invoice_date"] = self._extract_field(text, 'invoice_date')
-        result["due_date"] = self._extract_field(text, 'due_date')
-        result["billing_month"] = self._extract_field(text, 'billing_month')
-        result["invoice_total"] = self._extract_field(text, 'invoice_total')
+        result["due_date"] = self._extract_field(text, 'due_date') or self._extract_due_date_enhanced(text)
+        result["billing_month"] = self._extract_field(text, 'billing_month') or self._extract_billing_month_enhanced(text)
+        result["invoice_total"] = self._extract_field(text, 'invoice_total') or self._extract_total_enhanced(text)
         
         # Extract tax information
         result["tax"]["subtotal"] = self._extract_field(text, 'subtotal')
@@ -286,3 +286,61 @@ class InvoiceExtractor:
         except Exception as e:
             logging.error(f"Error extracting text from image: {str(e)}")
             raise Exception(f"Failed to extract text from image: {str(e)}")
+    
+    def _extract_invoice_number_enhanced(self, text: str) -> str:
+        """Enhanced invoice number extraction for Telkom format"""
+        # Telkom specific patterns
+        patterns = [
+            r'(?:OFFICIAL\s+RECEIPT\s+NO|Invoice\s+Number)[\s:]*([0-9\-]+)',
+            r'Nomor\s+Tagihan[\s.:]*([0-9\-]+)',
+            r'(\d{7,}000001[-]\d{6})',  # Telkom format: 4977298000001-202108
+            r'(\d{7,}[-]\d{6})',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_due_date_enhanced(self, text: str) -> str:
+        """Enhanced due date extraction"""
+        patterns = [
+            r'(?:Due\s+Date|Tanggal\s+Akhir\s+Pembayaran)[\s:]*(\d{1,2}\s+\w+\s+\d{4})',
+            r'(?:Due\s+Date|Tanggal\s+Akhir\s+Pembayaran)[\s:]*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{4})',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_billing_month_enhanced(self, text: str) -> str:
+        """Enhanced billing month extraction"""
+        patterns = [
+            r'(?:Billing\s+Month|Bulan\s+Tagihan)[\s:]*(\w+\s+\d{4})',
+            r'(?:Billing\s+Month|Bulan\s+Tagihan)[\s:]*(\d{6})',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        return ""
+    
+    def _extract_total_enhanced(self, text: str) -> str:
+        """Enhanced total amount extraction"""
+        patterns = [
+            r'(?:Tagihan\s+Bulan\s+Ini|New\s+Charge)[\s\w]*Rp[\s\.]*([0-9,\.]+)',
+            r'(?:Total|Jumlah)[\s]*Rp[\s\.]*([0-9,\.]+)',
+            r'Rp[\s\.]*([0-9,\.]+)(?=\s*Terbilang)',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                amount = match.group(1).replace('.', '').replace(',', '')
+                if len(amount) >= 6:  # Reasonable invoice amount
+                    return amount
+        return ""

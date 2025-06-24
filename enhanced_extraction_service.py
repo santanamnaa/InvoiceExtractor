@@ -164,31 +164,61 @@ class EnhancedInvoiceExtractor(InvoiceExtractor):
         if not self.ml_model or not self.feature_extractor:
             return {}
         
-        # Tokenize text
-        from ml_trainer import IndonesianTokenizer
-        tokenizer = IndonesianTokenizer()
-        tokens = tokenizer.tokenize(text)
-        
-        # Extract features for each token
-        features_list = []
-        for i, token in enumerate(tokens):
-            features = self.feature_extractor.extract_token_features(tokens, i)
-            features_list.append(list(features.values()))
-        
-        if not features_list:
+        try:
+            # Tokenize text
+            from ml_trainer import IndonesianTokenizer
+            tokenizer = IndonesianTokenizer()
+            tokens = tokenizer.tokenize(text)
+            
+            # Extract features for each token using simple feature extraction
+            features_list = []
+            for i, token in enumerate(tokens):
+                # Use simple feature extraction compatible with trained model
+                features = self._extract_simple_features(tokens, i)
+                features_list.append(features)
+            
+            if not features_list:
+                return {}
+            
+            # Predict labels
+            X = np.array(features_list)
+            y_pred = self.ml_model.predict(X)
+            
+            # Convert predictions back to labels
+            if hasattr(self.feature_extractor, 'label_encoder'):
+                predicted_labels = self.feature_extractor['label_encoder'].inverse_transform(y_pred)
+            elif isinstance(self.feature_extractor, dict) and 'label_encoder' in self.feature_extractor:
+                predicted_labels = self.feature_extractor['label_encoder'].inverse_transform(y_pred)
+            else:
+                return {}
+            
+            # Extract entities from predictions
+            ml_entities = self._extract_entities_from_predictions(tokens, predicted_labels)
+            
+            return ml_entities
+            
+        except Exception as e:
+            logging.warning(f"ML extraction error: {e}")
             return {}
+    
+    def _extract_simple_features(self, tokens: List[str], position: int) -> List[float]:
+        """Extract simple features compatible with trained model"""
+        if position >= len(tokens):
+            return [0.0] * 9
         
-        # Predict labels
-        X = np.array(features_list)
-        y_pred = self.ml_model.predict(X)
-        
-        # Convert predictions back to labels
-        predicted_labels = self.feature_extractor.label_encoder.inverse_transform(y_pred)
-        
-        # Extract entities from predictions
-        ml_entities = self._extract_entities_from_predictions(tokens, predicted_labels)
-        
-        return ml_entities
+        token = tokens[position]
+        features = [
+            len(token),  # token length
+            float(token.isdigit()),  # is numeric
+            float(token.isalpha()),  # is alphabetic
+            float('/' in token),  # has slash (dates)
+            float('-' in token),  # has hyphen
+            float('.' in token),  # has dot
+            float(position < 3),  # is beginning
+            float(position > len(tokens) - 3),  # is end
+            position / len(tokens) if len(tokens) > 0 else 0,  # relative position
+        ]
+        return features
     
     def _extract_entities_from_predictions(self, tokens: List[str], labels: List[str]) -> Dict[str, Any]:
         """Convert ML predictions to structured entities"""
