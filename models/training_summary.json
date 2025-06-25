@@ -1,18 +1,32 @@
 {
-  "total_iterations": 25,
-  "best_model": "RandomForest",
-  "best_f1_score": 1.0,
+  "total_iterations": 20,
+  "best_model": {
+    "name": "Gradient Boosting",
+    "f1_score": 0.9619549065230726
+  },
   "target_achieved": true,
-  "training_completed_at": "2025-06-24T10:59:35.691250",
-  "dataset_size": 100,
-  "feature_count": 9,
+  "average_f1": 0.8587490469259228,
+  "std_f1": 0.0903774449239342,
+  "models_over_target": 8,
+  "training_completed_at": "2025-06-25T14:10:56.763958",
+  "dataset_size": 9387,
+  "feature_count": 21,
   "label_classes": [
     "B-AMOUNT",
+    "B-BUYER_ADDRESS",
+    "B-BUYER_NAME",
+    "B-FAKTUR_NUMBER",
     "B-INVOICE_DATE",
     "B-INVOICE_NUMBER",
     "B-VENDOR_NAME",
     "B-VENDOR_TAX_ID",
+    "I-AMOUNT",
+    "I-BUYER_ADDRESS",
+    "I-BUYER_NAME",
+    "I-FAKTUR_NUMBER",
+    "I-INVOICE_DATE",
     "I-VENDOR_NAME",
+    "I-VENDOR_TAX_ID",
     "O"
   ]
 }

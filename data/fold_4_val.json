@@ -1,0 +1,3512 @@
+[
+  {
+    "id": "sample_000",
+    "text": "INVOICE NO: INV-1556-832 DATE: 10/01/2024 PT TELKOM INDONESIA NPWP: 01.85.-601.1--151.797 TOTAL: 643,803",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1556-832",
+      "DATE:",
+      "10/01/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.85.-601.1--151.797",
+      "TOTAL:",
+      "643,803"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_004",
+    "text": "INVOICE NO: INV-2383-58 DATE: 12/08/2024 PT TELKOM INDONESIA NPWP: 01.-729.975.1-539.681 TOTAL: 483,318",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2383-58",
+      "DATE:",
+      "12/08/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-729.975.1-539.681",
+      "TOTAL:",
+      "483,318"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_008",
+    "text": "INVOICE NO: INV-1284-164 DATE: 09/07/2024 PT TELKOM INDONESIA NPWP: 01.486.91.1-52.710 TOTAL: 1398,-346",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1284-164",
+      "DATE:",
+      "09/07/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.486.91.1-52.710",
+      "TOTAL:",
+      "1398,-346"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "O",
+      "B-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_011",
+    "text": "FAKTUR PAJAK: -570.502-24.-391 TANGGAL: 01/09/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -68 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-570.502-24.-391",
+      "TANGGAL:",
+      "01/09/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-68",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_014",
+    "text": "INVOICE NO: INV-2841--978 DATE: 19/03/2024 PT TELKOM INDONESIA NPWP: 01.-104.-987.1-637.943 TOTAL: 1221,604",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2841--978",
+      "DATE:",
+      "19/03/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-104.-987.1-637.943",
+      "TOTAL:",
+      "1221,604"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_023",
+    "text": "FAKTUR PAJAK: -156.-883-24.393 TANGGAL: 24/12/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -260 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-156.-883-24.393",
+      "TANGGAL:",
+      "24/12/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-260",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_027",
+    "text": "FAKTUR PAJAK: -849.-395-24.601 TANGGAL: 12/07/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -564 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-849.-395-24.601",
+      "TANGGAL:",
+      "12/07/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-564",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_032",
+    "text": "INVOICE NO: INV-2612--287 DATE: 06/09/2024 PT TELKOM INDONESIA NPWP: 01.490.-268.1--502.-537 TOTAL: -104,-997",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2612--287",
+      "DATE:",
+      "06/09/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.490.-268.1--502.-537",
+      "TOTAL:",
+      "-104,-997"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "O"
+    ]
+  },
+  {
+    "id": "sample_036",
+    "text": "INVOICE NO: INV-2107--71 DATE: 14/09/2024 PT TELKOM INDONESIA NPWP: 01.189.-252.1--319.-685 TOTAL: 1482,-39",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2107--71",
+      "DATE:",
+      "14/09/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.189.-252.1--319.-685",
+      "TOTAL:",
+      "1482,-39"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_039",
+    "text": "FAKTUR PAJAK: 379.-898-24.619 TANGGAL: 26/02/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -157 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "379.-898-24.619",
+      "TANGGAL:",
+      "26/02/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-157",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_040",
+    "text": "INVOICE NO: INV-2103--552 DATE: 08/09/2024 PT TELKOM INDONESIA NPWP: 01.643.159.1-846.726 TOTAL: 755,-241",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2103--552",
+      "DATE:",
+      "08/09/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.643.159.1-846.726",
+      "TOTAL:",
+      "755,-241"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_044",
+    "text": "INVOICE NO: INV-2159--169 DATE: 08/06/2024 PT TELKOM INDONESIA NPWP: 01.-811.948.1--966.82 TOTAL: -310,-278",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2159--169",
+      "DATE:",
+      "08/06/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-811.948.1--966.82",
+      "TOTAL:",
+      "-310,-278"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_047",
+    "text": "FAKTUR PAJAK: 168.-680-24.-247 TANGGAL: 20/02/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -870 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "168.-680-24.-247",
+      "TANGGAL:",
+      "20/02/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-870",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_061",
+    "text": "FAKTUR PAJAK: 54.814-24.530 TANGGAL: 12/04/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -648 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "54.814-24.530",
+      "TANGGAL:",
+      "12/04/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-648",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_062",
+    "text": "INVOICE NO: INV-2041--486 DATE: 02/12/2024 PT TELKOM INDONESIA NPWP: 01.562.-716.1--877.625 TOTAL: 1249,-124",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2041--486",
+      "DATE:",
+      "02/12/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.562.-716.1--877.625",
+      "TOTAL:",
+      "1249,-124"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_064",
+    "text": "INVOICE NO: INV-2354-221 DATE: 17/05/2024 PT TELKOM INDONESIA NPWP: 01.146.-512.1--250.-208 TOTAL: 1337,180",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2354-221",
+      "DATE:",
+      "17/05/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.146.-512.1--250.-208",
+      "TOTAL:",
+      "1337,180"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_070",
+    "text": "INVOICE NO: INV-2706--660 DATE: 24/05/2024 PT TELKOM INDONESIA NPWP: 01.-431.960.1--290.969 TOTAL: 104,227",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2706--660",
+      "DATE:",
+      "24/05/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-431.960.1--290.969",
+      "TOTAL:",
+      "104,227"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_081",
+    "text": "FAKTUR PAJAK: 919.-574-24.338 TANGGAL: 16/06/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO 916 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "919.-574-24.338",
+      "TANGGAL:",
+      "16/06/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "916",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_094",
+    "text": "INVOICE NO: INV-2187--42 DATE: 15/05/2024 PT TELKOM INDONESIA NPWP: 01.-755.88.1-730.-342 TOTAL: 648,719",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2187--42",
+      "DATE:",
+      "15/05/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-755.88.1-730.-342",
+      "TOTAL:",
+      "648,719"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_098",
+    "text": "INVOICE NO: INV-2904--970 DATE: 27/10/2024 PT TELKOM INDONESIA NPWP: 01.418.170.1--883.370 TOTAL: -113,-469",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2904--970",
+      "DATE:",
+      "27/10/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.418.170.1--883.370",
+      "TOTAL:",
+      "-113,-469"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_000_var_0",
+    "text": "INVOICE NO: INV-1556-832 DATE: 10/01/2024 UD TELKOM INDONESIA NPWP: 01.85.-601.1--151.797 TOTAL: 643,803",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1556-832",
+      "DATE:",
+      "10/01/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.85.-601.1--151.797",
+      "TOTAL:",
+      "643,803"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_005_var_0",
+    "text": "FAKTUR PAJAK: 410.-946-24.-113 TANGGAL: 07/10/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO 256 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "410.-946-24.-113",
+      "TANGGAL:",
+      "07/10/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "256",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_011_var_0",
+    "text": "FAKTUR PAJAK: -570.502-24.-391 TANGGAL: 01/09/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO -68 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-570.502-24.-391",
+      "TANGGAL:",
+      "01/09/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-68",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_011_var_1",
+    "text": "FAKTUR PAJAK: -570.502-24.-391 TANGGAL: 01/09/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO -68 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-570.502-24.-391",
+      "TANGGAL:",
+      "01/09/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-68",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_014_var_0",
+    "text": "INVOICE NO: INV-2841--978 DATE: 19/03/2024 PT TELKOM INDONESIA NPWP: 01.-104.-987.1-637.943 TOTAL: 1221,604",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2841--978",
+      "DATE:",
+      "19/03/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-104.-987.1-637.943",
+      "TOTAL:",
+      "1221,604"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_017_var_1",
+    "text": "FAKTUR PAJAK: 471.-302-24.-54 TANGGAL: 16/10/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO 252 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "471.-302-24.-54",
+      "TANGGAL:",
+      "16/10/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "252",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_019_var_0",
+    "text": "FAKTUR PAJAK: -188.787-24.106 TANGGAL: 04/12/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO 480 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-188.787-24.106",
+      "TANGGAL:",
+      "04/12/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "480",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_025_var_0",
+    "text": "FAKTUR PAJAK: -259.370-24.-419 TANGGAL: 20/03/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO -30 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-259.370-24.-419",
+      "TANGGAL:",
+      "20/03/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-30",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_026_var_1",
+    "text": "INVOICE NO: INV-1081-964 DATE: 03/02/2024 Perusahaan TELKOM INDONESIA NPWP: 01.-697.442.1--529.642 TOTAL: 1163,-364",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1081-964",
+      "DATE:",
+      "03/02/2024",
+      "Perusahaan",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-697.442.1--529.642",
+      "TOTAL:",
+      "1163,-364"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT",
+      "O"
+    ]
+  },
+  {
+    "id": "sample_028_var_0",
+    "text": "INVOICE NO: INV-l575--433 DATE: 27/06/2024 CV TELKOM INDONESIA NPWP: 01.16.-605.1--976.-B13 TOTAL: -377,12",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-l575--433",
+      "DATE:",
+      "27/06/2024",
+      "CV",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.16.-605.1--976.-B13",
+      "TOTAL:",
+      "-377,12"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_031_var_0",
+    "text": "FAKTUR PAJAK: -871.826-24.-516 TANGGAL: 05/03/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO 318 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-871.826-24.-516",
+      "TANGGAL:",
+      "05/03/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "318",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_035_var_1",
+    "text": "FAKTUR PAJAK: -141.998-24.-656 TANGGAL: 19/06/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO -418 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-141.998-24.-656",
+      "TANGGAL:",
+      "19/06/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-418",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_049_var_1",
+    "text": "FAKTUR PAJAK: -917.-888-24.916 TANGGAL: 19/11/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO 238 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-917.-888-24.916",
+      "TANGGAL:",
+      "19/11/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "238",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_050_var_0",
+    "text": "INVOICE NO: INV-2041-755 DATE: 07/03/2024 PT TELKOM INDONESIA NPWP: 01.983.-86.1-613.-407 TOTAL: 43,-697",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2041-755",
+      "DATE:",
+      "07/03/2024",
+      "PT",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.983.-86.1-613.-407",
+      "TOTAL:",
+      "43,-697"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_051_var_0",
+    "text": "FAKTUR PAJAK: -653.464-24.-69 TANGGAL: 14/11/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO 207 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-653.464-24.-69",
+      "TANGGAL:",
+      "14/11/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "207",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_052_var_0",
+    "text": "INVOICE NO: INV-1331-952 DATE: 17/09/2024 UD TELKOM INDONESIA NPWP: 01.523.594.1--765.376 TOTAL: 898,235",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1331-952",
+      "DATE:",
+      "17/09/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.523.594.1--765.376",
+      "TOTAL:",
+      "898,235"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_053_var_1",
+    "text": "FAKTUR PAJAK: 305.0-24.846 TANGGAL: 27/09/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO -307 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "305.0-24.846",
+      "TANGGAL:",
+      "27/09/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-307",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_054_var_1",
+    "text": "INVOICE NO: INV-2756--586 DATE: 10/05/2024 UD TELKOM INDONESIA NPWP: 01.947.-263.1--622.968 TOTAL: 1394,-945",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2756--586",
+      "DATE:",
+      "10/05/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.947.-263.1--622.968",
+      "TOTAL:",
+      "1394,-945"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_056_var_0",
+    "text": "INVOICE NO: INV-1464-590 DATE: 05/11/2024 CV TELKOM INDONESIA NPWP: 01.-730.136.1--717.848 TOTAL: 855,464",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1464-590",
+      "DATE:",
+      "05/11/2024",
+      "CV",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-730.136.1--717.848",
+      "TOTAL:",
+      "855,464"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_058_var_0",
+    "text": "INVOICE NO: INV-1332-626 DATE: 05/11/2024 UD TELKOM INDONESIA NPWP: 01.-552.-939.1--420.771 TOTAL: 242,-854",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1332-626",
+      "DATE:",
+      "05/11/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-552.-939.1--420.771",
+      "TOTAL:",
+      "242,-854"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_059_var_1",
+    "text": "FAKTUR PAJAK: -338.588-24.484 TANGGAL: 16/06/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO 149 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-338.588-24.484",
+      "TANGGAL:",
+      "16/06/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "149",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_063_var_1",
+    "text": "FAKTUR PAJAK: 323.-887-24.-273 TANGGAL: 12/11/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO -221 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "323.-887-24.-273",
+      "TANGGAL:",
+      "12/11/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-221",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_068_var_0",
+    "text": "INVOICE NO: INV-1230--211 DATE: 14/12/2024 CV TELKOM INDONESIA NPWP: 01.5.-718.1--675.-681 TOTAL: -409,-96",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1230--211",
+      "DATE:",
+      "14/12/2024",
+      "CV",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.5.-718.1--675.-681",
+      "TOTAL:",
+      "-409,-96"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_070_var_0",
+    "text": "INVOICE NO: INV-2706--660 DATE: 24/05/2024 CV TELKOM INDONESIA NPWP: 01.-431.960.1--290.969 TOTAL: 104,227",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2706--660",
+      "DATE:",
+      "24/05/2024",
+      "CV",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-431.960.1--290.969",
+      "TOTAL:",
+      "104,227"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_071_var_0",
+    "text": "FAKTUR PAJAK: -861.467-24.-622 TANGGAL: 23/02/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO -250 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-861.467-24.-622",
+      "TANGGAL:",
+      "23/02/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-250",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_077_var_1",
+    "text": "FAKTUR PAJAK: -533.-142-24.-61 TANGGAL: 13/09/2024 PT MAJU JAYA ALAMAT: JL SUDIRMAN NO -607 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-533.-142-24.-61",
+      "TANGGAL:",
+      "13/09/2024",
+      "PT",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-607",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_079_var_0",
+    "text": "FAKTUR PAJAK: -908.656-24.-666 TANGGAL: 04/11/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO 414 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-908.656-24.-666",
+      "TANGGAL:",
+      "04/11/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "414",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_079_var_1",
+    "text": "FAKTUR PAJAK: -908.656-24.-666 TANGGAL: 04/11/2024 CV MAJU JAYA ALAMAT: JL SUDIRMAN NO 414 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-908.656-24.-666",
+      "TANGGAL:",
+      "04/11/2024",
+      "CV",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "414",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_080_var_1",
+    "text": "INVOICE NO: INV-2678--537 DATE: 15/11/2024 CV TELKOM INDONESIA NPWP: 01.555.549.1-812.298 TOTAL: -30,-791",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2678--537",
+      "DATE:",
+      "15/11/2024",
+      "CV",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.555.549.1-812.298",
+      "TOTAL:",
+      "-30,-791"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_081_var_1",
+    "text": "FAKTUR PAJAK: 919.-574-24.338 TANGGAL: 16/06/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO 916 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "919.-574-24.338",
+      "TANGGAL:",
+      "16/06/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "916",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_082_var_0",
+    "text": "INVOICE NO: INV-1079--809 DATE: 21/10/2024 UD TELKOM INDONESIA NPWP: 01.-659.22.1-959.-915 TOTAL: 826,910",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1079--809",
+      "DATE:",
+      "21/10/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-659.22.1-959.-915",
+      "TOTAL:",
+      "826,910"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_083_var_1",
+    "text": "FAKTUR PAJAK: -909.213-24.985 TANGGAL: 01/07/2024 PT MAJU JAYA ALAMAT: JL SUDIRMAN NO -691 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-909.213-24.985",
+      "TANGGAL:",
+      "01/07/2024",
+      "PT",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-691",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "I-FAKTUR_NUMBER",
+      "B-INVOICE_DATE",
+      "I-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_084_var_0",
+    "text": "INVOICE NO: INV-2361-841 DATE: 16/10/2024 Perusahaan TELKOM INDONESIA NPWP: 01.-282.441.1-835.959 TOTAL: 720,103",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2361-841",
+      "DATE:",
+      "16/10/2024",
+      "Perusahaan",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-282.441.1-835.959",
+      "TOTAL:",
+      "720,103"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT",
+      "O"
+    ]
+  },
+  {
+    "id": "sample_086_var_0",
+    "text": "INVOICE NO: INV-2709--535 DATE: 11/11/2024 CV TELKOM INDONESIA NPWP: 01.62.-130.1--793.-690 TOTAL: -98,-750",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2709--535",
+      "DATE:",
+      "11/11/2024",
+      "CV",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.62.-130.1--793.-690",
+      "TOTAL:",
+      "-98,-750"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_087_var_1",
+    "text": "FAKTUR PAJAK: -742.-402-24.-278 TANGGAL: 20/11/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO 751 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-742.-402-24.-278",
+      "TANGGAL:",
+      "20/11/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "751",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_089_var_1",
+    "text": "FAKTUR PAJAK: -228.-782-24.-400 TANGGAL: 16/04/2024 UD MAJU JAYA ALAMAT: JL SUDIRMAN NO 22 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-228.-782-24.-400",
+      "TANGGAL:",
+      "16/04/2024",
+      "UD",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "22",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS"
+    ]
+  },
+  {
+    "id": "sample_092_var_1",
+    "text": "INVOICE NO: INV-1842-79 DATE: 13/03/2024 UD TELKOM INDONESIA NPWP: 01.-574.495.1-765.370 TOTAL: 479,-601",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-1842-79",
+      "DATE:",
+      "13/03/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.-574.495.1-765.370",
+      "TOTAL:",
+      "479,-601"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "O",
+      "B-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  },
+  {
+    "id": "sample_095_var_0",
+    "text": "FAKTUR PAJAK: -425.-256-24.-353 TANGGAL: 07/08/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO -157 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-425.-256-24.-353",
+      "TANGGAL:",
+      "07/08/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-157",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "O"
+    ]
+  },
+  {
+    "id": "sample_095_var_1",
+    "text": "FAKTUR PAJAK: -425.-256-24.-353 TANGGAL: 07/08/2024 Perusahaan MAJU JAYA ALAMAT: JL SUDIRMAN NO -157 JAKARTA",
+    "entities": [
+      {
+        "start": 14,
+        "end": 32,
+        "label": "FAKTUR_NUMBER"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 53,
+        "end": 65,
+        "label": "BUYER_NAME"
+      },
+      {
+        "start": 74,
+        "end": 101,
+        "label": "BUYER_ADDRESS"
+      }
+    ],
+    "tokens": [
+      "FAKTUR",
+      "PAJAK:",
+      "-425.-256-24.-353",
+      "TANGGAL:",
+      "07/08/2024",
+      "Perusahaan",
+      "MAJU",
+      "JAYA",
+      "ALAMAT:",
+      "JL",
+      "SUDIRMAN",
+      "NO",
+      "-157",
+      "JAKARTA"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-FAKTUR_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-BUYER_NAME",
+      "I-BUYER_NAME",
+      "O",
+      "B-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "I-BUYER_ADDRESS",
+      "O"
+    ]
+  },
+  {
+    "id": "sample_098_var_0",
+    "text": "INVOICE NO: INV-2904--970 DATE: 27/10/2024 UD TELKOM INDONESIA NPWP: 01.418.170.1--883.370 TOTAL: -113,-469",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "label": "INVOICE_NUMBER"
+      },
+      {
+        "start": 31,
+        "end": 41,
+        "label": "INVOICE_DATE"
+      },
+      {
+        "start": 42,
+        "end": 60,
+        "label": "VENDOR_NAME"
+      },
+      {
+        "start": 67,
+        "end": 85,
+        "label": "VENDOR_TAX_ID"
+      },
+      {
+        "start": 93,
+        "end": 100,
+        "label": "AMOUNT"
+      }
+    ],
+    "tokens": [
+      "INVOICE",
+      "NO:",
+      "INV-2904--970",
+      "DATE:",
+      "27/10/2024",
+      "UD",
+      "TELKOM",
+      "INDONESIA",
+      "NPWP:",
+      "01.418.170.1--883.370",
+      "TOTAL:",
+      "-113,-469"
+    ],
+    "labels": [
+      "O",
+      "O",
+      "B-INVOICE_NUMBER",
+      "O",
+      "B-INVOICE_DATE",
+      "B-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "I-VENDOR_NAME",
+      "B-VENDOR_TAX_ID",
+      "I-VENDOR_TAX_ID",
+      "B-AMOUNT",
+      "I-AMOUNT"
+    ]
+  }
+]

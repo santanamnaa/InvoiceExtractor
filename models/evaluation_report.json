@@ -1,0 +1,60 @@
+{
+  "model_performance": {
+    "best_model": "Gradient Boosting",
+    "best_f1": 0.9619549065230726,
+    "target_met": true,
+    "iterations": 20
+  },
+  "cross_validation": {
+    "mean_f1": 0.9605134782370441,
+    "std_f1": 0.00566492984986441,
+    "cv_stable": true
+  },
+  "error_analysis": {
+    "total_errors": 30,
+    "false_positive_rate": 0.6666666666666666,
+    "top_entities": [
+      [
+        "O",
+        20
+      ],
+      [
+        "BUYER_NAME",
+        8
+      ],
+      [
+        "AMOUNT",
+        7
+      ],
+      [
+        "VENDOR_NAME",
+        6
+      ],
+      [
+        "VENDOR_TAX_ID",
+        6
+      ]
+    ]
+  },
+  "post_processing": {
+    "success_rate": 0.5555555555555556,
+    "date_norm": true,
+    "currency_norm": true,
+    "npwp_norm": true
+  },
+  "production_readiness": {
+    "f1_ok": true,
+    "iters_ok": true,
+    "cv_ok": true,
+    "errors_analyzed": true,
+    "post_validated": true
+  },
+  "recommendations": [
+    "Tighten post-processing to reduce false positives",
+    "Augment training set for frequent false-negative entities",
+    "Leverage actual document coordinates for layout features",
+    "Enhance Indonesian linguistic features",
+    "Implement active learning for continuous improvement"
+  ],
+  "evaluation_date": "2025-06-25T14:23:53.780842"
+}

@@ -1,152 +1,142 @@
 [
   {
     "iteration": 1,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:31.553410"
+    "model": "Random Forest",
+    "train_f1": 0.9662852506215021,
+    "val_f1": 0.9595960446339286,
+    "training_time": 0.2528529167175293
   },
   {
     "iteration": 2,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:31.641063"
+    "model": "Gradient Boosting",
+    "train_f1": 0.9655307446001512,
+    "val_f1": 0.9594362936323764,
+    "training_time": 4.643061876296997
   },
   {
     "iteration": 3,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:31.899810"
+    "model": "Logistic Regression",
+    "train_f1": 0.8151494280353837,
+    "val_f1": 0.8061361249695714,
+    "training_time": 1.3341009616851807
   },
   {
     "iteration": 4,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:32.082361"
+    "model": "SVM",
+    "train_f1": 0.8177050141504015,
+    "val_f1": 0.8200625578613051,
+    "training_time": 1.766390085220337
   },
   {
     "iteration": 5,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:32.246561"
+    "model": "Random Forest",
+    "train_f1": 0.9664769547146295,
+    "val_f1": 0.9595315358958952,
+    "training_time": 0.11694502830505371
   },
   {
     "iteration": 6,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:32.338599"
+    "model": "Gradient Boosting",
+    "train_f1": 0.9493460800406089,
+    "val_f1": 0.944436325180893,
+    "training_time": 2.5417118072509766
   },
   {
     "iteration": 7,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:32.493948"
+    "model": "Logistic Regression",
+    "train_f1": 0.8151494280353837,
+    "val_f1": 0.8061361249695714,
+    "training_time": 1.149374008178711
   },
   {
     "iteration": 8,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:32.673762"
+    "model": "SVM",
+    "train_f1": 0.8177050141504015,
+    "val_f1": 0.8200625578613051,
+    "training_time": 1.7007369995117188
   },
   {
     "iteration": 9,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:32.929502"
+    "model": "Random Forest",
+    "train_f1": 0.9663215700546068,
+    "val_f1": 0.958283184400138,
+    "training_time": 0.22994613647460938
   },
   {
     "iteration": 10,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:33.157102"
+    "model": "Gradient Boosting",
+    "train_f1": 0.696048617506828,
+    "val_f1": 0.6992556164631722,
+    "training_time": 2.4105658531188965
   },
   {
     "iteration": 11,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:33.382086"
+    "model": "Logistic Regression",
+    "train_f1": 0.7574946284145423,
+    "val_f1": 0.7498421546503923,
+    "training_time": 0.5660297870635986
   },
   {
     "iteration": 12,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:33.543169"
+    "model": "SVM",
+    "train_f1": 0.8177050141504015,
+    "val_f1": 0.8200625578613051,
+    "training_time": 1.7392489910125732
   },
   {
     "iteration": 13,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:33.719974"
+    "model": "Random Forest",
+    "train_f1": 0.9661998009389002,
+    "val_f1": 0.9567262011527838,
+    "training_time": 0.46581292152404785
   },
   {
     "iteration": 14,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:33.800359"
+    "model": "Gradient Boosting",
+    "train_f1": 0.696048617506828,
+    "val_f1": 0.6992556164631722,
+    "training_time": 2.5045111179351807
   },
   {
     "iteration": 15,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:34.001257"
+    "model": "Logistic Regression",
+    "train_f1": 0.8151494280353837,
+    "val_f1": 0.8061361249695714,
+    "training_time": 1.3156609535217285
   },
   {
     "iteration": 16,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:34.132944"
+    "model": "SVM",
+    "train_f1": 0.8177050141504015,
+    "val_f1": 0.8200625578613051,
+    "training_time": 1.7209959030151367
   },
   {
     "iteration": 17,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:34.233427"
+    "model": "Random Forest",
+    "train_f1": 0.9575207411525728,
+    "val_f1": 0.9519993352900029,
+    "training_time": 0.24778294563293457
   },
   {
     "iteration": 18,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:34.494728"
+    "model": "Gradient Boosting",
+    "train_f1": 0.9662657066036876,
+    "val_f1": 0.9619549065230726,
+    "training_time": 9.095451831817627
   },
   {
     "iteration": 19,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:34.717216"
+    "model": "Logistic Regression",
+    "train_f1": 0.8604561712280253,
+    "val_f1": 0.855942560017387,
+    "training_time": 2.1511898040771484
   },
   {
     "iteration": 20,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:34.960203"
-  },
-  {
-    "iteration": 21,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:35.202881"
-  },
-  {
-    "iteration": 22,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:35.282266"
-  },
-  {
-    "iteration": 23,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:35.438335"
-  },
-  {
-    "iteration": 24,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:35.527031"
-  },
-  {
-    "iteration": 25,
-    "model": "RandomForest",
-    "val_f1": 1.0,
-    "timestamp": "2025-06-24T10:59:35.685103"
+    "model": "SVM",
+    "train_f1": 0.8177050141504015,
+    "val_f1": 0.8200625578613051,
+    "training_time": 1.7475934028625488
   }
 ]
